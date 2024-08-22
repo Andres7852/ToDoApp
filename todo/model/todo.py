@@ -31,3 +31,14 @@ class TodoBook:
      def completed_todos (self) -> List[todo]:
         return [todo for todo in self.todos.values() if todo.completed]
      
+     def tags_todo_count(self) -> Dict[str, int]:
+        tags_count = {}
+        for todo in self.todos.values():
+            for tag in todo.tags:
+                if tag in tags_count:
+                    tags_count[tag] += 1
+                else:
+                    tags_count[tag] = 1
+        return tags_count
+     
+        
