@@ -1,3 +1,5 @@
+from typing import Dict, List
+
 class todo:
     def __init__(self, code_id: int, title: str, description: str, completed: bool):
             self.code_id = code_id
