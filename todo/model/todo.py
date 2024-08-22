@@ -16,5 +16,8 @@ class todo:
     def __str__ (self) -> str:
         return f"{self.code_id} - {self.title}"
     
+class TodoBook:
+     def __init__(self):
+        self.todos = Dict[int, todo] = {}
 
-    
+     
